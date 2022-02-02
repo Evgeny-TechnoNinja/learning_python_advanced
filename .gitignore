@@ -1,4 +1,8 @@
 .idea/
 __pycache__/
 env/
-
+.mypy_cache
+dz1/
+*.py.bkp
+dz1_1_run.py
+homework_2/
