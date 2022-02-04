@@ -36,7 +36,7 @@ class Url:
         return self._url
 
     def _schema_validation(self):
-        if self._scheme in Url.__reserved_schemes:
+        if self._scheme in self.__reserved_schemes:
             self._url += f"{self._scheme}://"
         else:
             raise UrlFormatError(self._scheme)
@@ -50,12 +50,10 @@ class Url:
             aut_data: list = self._authority.split(separator)
             if aut_data[-1].isdigit():
                 self._url += f"{aut_data[0]}{separator}{aut_data[-1]}"
-                if self._path:
-                    self._url += "/"
         else:
             self._url += f"{self._authority}"
-            if self._path:
-                self._url += "/"
+        if self._path:
+            self._url += "/"
 
     def _build_path(self):
         separator = "/"
