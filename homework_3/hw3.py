@@ -52,6 +52,7 @@ class Url:
                 self._url += f"{aut_data[0]}{separator}{aut_data[-1]}"
         else:
             self._url += f"{self._authority}"
+
         if self._path:
             self._url += "/"
 
