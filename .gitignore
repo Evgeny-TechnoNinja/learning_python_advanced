@@ -6,3 +6,6 @@ dz1/
 *.py.bkp
 dz1_1_run.py
 homework_2/
+homework_4/hw4.py.old
+homework_3/createurl.py
+setup.cfg
